@@ -78,13 +78,15 @@ HTML태그를 JS에서 이용할수 있는 객체로 만드는 것이다. 즉 HT
 
 HTML파일은 HTML파서에 의해 파싱 되어 DOM트리로 변환된다.
 
-![image-20221127165556225](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127165556225.png)
+![image](https://user-images.githubusercontent.com/72599761/204128531-f1c06a29-3f6e-4435-87ce-af0020315032.png)
+
 
 ◾ CSS -> CSSOM (<link> ,<style> 를 통하여 생성)
 
 CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
-![image-20221127165611057](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127165611057.png)
+![image](https://user-images.githubusercontent.com/72599761/204128544-ecca39dc-1653-4d3b-a9a4-32d7d9651729.png)
+
 
 **파싱(parse or parsing)?**
 
@@ -98,7 +100,8 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
 ◾Render Tree
 
-![image-20221127165655613](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127165655613.png)
+![image](https://user-images.githubusercontent.com/72599761/204128547-bda612db-e097-4415-8706-4e78ba796f79.png)
+
 
 **4. Layout**
 
@@ -123,7 +126,8 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
   브라우저의 창이나 프레임을 프로그래밍적으로 제어할 수 있게 해주는 객체 모델이다. 이를 통해서 브라우저의 새 창을 열거나 다른 문서로 이동하는 등의 기능을 실행시킬 수 있다. 전역 객체 window가 있으며 하위 객체들로 location, navigator, document, screen, history가 포함되어 있다.  
 
-​		![image-20221127174100458](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127174100458.png)
+![image](https://user-images.githubusercontent.com/72599761/204128559-73ab0c21-1967-4a16-93bd-99ae173993ba.png)
+
 
 
 
@@ -205,7 +209,7 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
 평소에 모달창을 열고 닫는 상태값처럼 한 컴포넌트 내에서 상태값 관리가 가능하면 useState로 상태관리를 하고, 단순 props drilling이 심할 때나 적당히 복잡한 컴포넌트가 존재하고, 외부 라이브러리를 쓰고 싶지 않을 때는 context와 useReducer 조합을 사용합니다. 특정 구성 요소만 re-render 시키거나, 사이드 이펙트를 줄이기 위해서  redux toolkit을 사용하여 관리합니다. 
 
-
+<br>
 
 - 상태란? 웹 어플리케이션을 render하는데 있어 영향을 미칠 수 있는 값이다.
 
@@ -217,7 +221,9 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
   1. UI에 직/간접적으로 영향을 주기 때문에 => 유저에게 어색한 경험, 버그 발생 
 
-  		  2.  리액트는 단방향 데이터 바인딩을 하므로 부모에서 자식컴포넌트로만 데이터 전달이 가능하다. props drilling이 심할 때나 여러 컴포넌트에서 접근해서 사용하는 상태값을 가질 경우에 유지보수가 어려워진다. 이를 해결하기 위해 상태관리가 필요하다. 
+  2.  리액트는 단방향 데이터 바인딩을 하므로 부모에서 자식컴포넌트로만 데이터 전달이 가능하다. props drilling이 심할 때나 여러 컴포넌트에서 접근해서 사용하는 상태값을 가질 경우에 유지보수가 어려워진다. 이를 해결하기 위해 상태관리가 필요하다. 
+
+<br>
 
 - 나의 상태관리 
 
@@ -233,9 +239,9 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
      : 2번보다 강력한 기능이 필요할 때! props drilling도 심하고 굉장히 복잡한 컴포넌트 구조이거나 저장소 상태의 특정 부분만 사용하고, 해당 값을 re-render 시키거나, 사이드 이펙트를 줄이기 위해서 사용. 
 
-     
+<br>     
 
-     (useReducer는 context내부에 포함된 컴포넌트들이 상태값의 일부에만 관심있더라도 강제로 re-render되므로 성능문제 발생. useReducer는 미들웨어도 존재하지 않는다. )
+(useReducer는 context내부에 포함된 컴포넌트들이 상태값의 일부에만 관심있더라도 강제로 re-render되므로 성능문제 발생. useReducer는 미들웨어도 존재하지 않는다. )
 
 
 <br>
@@ -276,7 +282,7 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 **컴포넌트들의 데이터 교류가 복잡해질 때** 이를 효율적으로 관리하기 위해 리덕스를 사용합니다. 
 리덕스를 사용하면 상태값을 컴포넌트에 종속시키지 않고, 상태 관리를 컴포넌트의 바깥에서 관리할 수 있기 때문에 효율적인 상태관리가 가능해진다. 
 
-
+<br>
 
 - 컴포넌트들의 데이터 교류가 복잡해질 때  
 
@@ -305,23 +311,22 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
 - 데이터의 흐름은 dispatcher => store => view 순서이며 뷰에서 입력이 발생하면 action을 통해서 dispatcher로 향하게 된다. 
 
-  ![image-20221125170150040](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221125170150040.png)
+![image](https://user-images.githubusercontent.com/72599761/204128681-99ddf4e5-fdb2-4910-98af-b40d925cb471.png)
 
-  ##### - Dispatcher 
+##### - Dispatcher 
 
-   dispatcher는 Flux 애플리케이션의 모든 데이터 흐름을 관리하는 일종의 허브 역할을 한다. 
+dispatcher는 Flux 애플리케이션의 모든 데이터 흐름을 관리하는 일종의 허브 역할을 한다. 
+액션이 발생하면 디스패처로 메세지나 액션 객체가 전달이 되고, 디스패쳐에서는 이러한 메세지 혹은 액션 객체를 콜백함수를 통해 스토어로 전달한다. 스토어에 접근하기 위한 일종의 단계이고, 액션을 통해 접근하기 위해서는 디스패처의 단계를 거쳐야한다. 
 
-  액션이 발생하면 디스패처로 메세지나 액션 객체가 전달이 되고, 디스패쳐에서는 이러한 메세지 혹은 액션 객체를 콜백함수를 통해 스토어로 전달한다. 스토어에 접근하기 위한 일종의 단계이고, 액션을 통해 접근하기 위해서는 디스패처의 단계를 거쳐야한다. 
+<br>
 
-
-
-##### 	   - Action 
+##### - Action 
 
 디스패처를 통해 스토어에 변화를 일으킬 수 있는데 이 때 디스패처의 데이터 묶음을 액션이라고 한다. 
 
+<br>
 
-
-##### 	  - Store
+##### - Store
 
 스토어는 애플리케이션의 상태를 저장 합니다. 모든 상태 변경은 스토어에 의해 결정되며 상태 변경을 위한 요청을 스토어에 직접 할 수는 없습니다. 상태 변경을 위해서는 꼭 액션 생성자를 통해 디스패쳐 단계를 거친 후 액션을 보내야만 상태값 변경이 가능합니다.
 
@@ -332,17 +337,19 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
 ### 🐬 MVC 모델이란? 
 
-![image-20221125165017917](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221125165017917.png)
+![image](https://user-images.githubusercontent.com/72599761/204128699-43124b80-a454-40b1-95ad-2ff69728e64f.png)
 
 - controller, model, view로 이루어진 아키텍처 
 - Controller는 Model의 데이터를 조회하거나 업데이트하는 역할을 하고, Model은 이런 데이터를 View에 반영시킨다. 또 View는 사용자로부터 데이터를 입력받기도 하므로 사용자의 입력이 Model에 영향을 주기도 한다. 
 - 이러한 구조가 거대한 어플리케이션을 대상으로 한 프로젝트에 대해서는 복잡하고 빨라진다. 
 
-![image-20221125165335122](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221125165335122.png)
+![image](https://user-images.githubusercontent.com/72599761/204128708-039cf642-8ce1-488f-a7c3-03085b3f18e4.png)
+
+<br>
 
 - 문제점 : 사용자와의 상호작용이 view에서 일어났기 때문에 model을 업데이트 해줘야하고, 의존하는 model이 있을 경우 그 model까지 업데이트를 해줘야 한다. 아주 많은 코드 변경이 발생한다. 
 
-
+<br>
 
 - 해결 : 단방향 데이터 흐름을 택했다. 단방향 데이터 흐름을 가지는 구조는 데이터는 단방향으로만 흐르고, 새로운 데이터를 넣으면 처음부터 다시 시작되는 방식으로 설계되어있다. 이러한 시스템 구성을 Flux 구조라고 한다. 
 
@@ -357,7 +364,7 @@ CSS파일은 CSS파서에 의해 파싱 되어 CSSOM트리로 변환된다.
 
 여기서 문제점은 돔은 새로운 요청이나 변경사항이 있을 때마다 매번 리렌더링을 합니다. 매번 새롭게 구성하기 때문에 렌더할 양이 많아지면 속도가 느려지게 됩니다. 
 
-
+<br>
 
 때문에 가상돔이 나왔습니다. 
 가상돔은 돔의 구조를 흉내낸 Javascript 객체(트리구조)입니다. 
@@ -365,7 +372,7 @@ In-memory에 존재하기 때문에 실제로 렌더되지 않습니다.
 
 리액트가 가상돔을 반영하는 절차를 보면, 변경사항이 있으면 UI를 가상돔에 리렌더링 합니다. 가상돔끼리 비교하고, 변경된 부분만 실제 돔에 적용시킵니다. 
 
-
+<br>
 
 - 리얼돔 : 웹 페이지를 이루는 태그들을 자바스크립트가 이용할 수 있게끔 브라우저가 트리구조로 만든 객체 모델을 의미한다. 
 - 가상돔 : 가상 DOM은 DOM의 상태를 메모리 위에 계속 올려두고, DOM에 변경이 있을 경우 해당 변경을 반영한다.
@@ -382,11 +389,11 @@ useRef는 저장공간(변수 관리) 이나 DOM 요소에 접근하기 위해 �
 
 state 값을 바꿀 때 대표적으로 사용되는 훅이 useState인데, useRef는 ref 안에 값을 아무리 변경해도 컴포넌트는 다시 렌더링 되지 않습니다. 즉 state 대신 ref를 사용하면 불필요한 렌더링을 막을 수 있습니다. 또한 컴포넌트가 렌더링이 되어도 ref 안에 저장되어 있는 값은 변화되지 않고 그대로 유지가 됩니다. 이에 변경시 렌더링을 발생시키지 말아야 하는 값을 다룰 때 편리합니다. 
 
-
+<br>
 
 DOM 요소 접근에 대해서는 보통 DOM에 접근해서 focus 하는 곳에 많이 사용한다. querySelector를 사용해서도 DOM 요소를 접근할 수 있지만, React에서 querySelector를 사용하게 되면, 실제 DOM의 요소를 가져오게 된다. 하지만 React는 Virtual DOM을 통해 Real DOM을 그리기 때문에, React가 제어하고 있는 Virtual DOM 안에 있는 요소에 접근할 수 있다. 
 
-
+<br>
 
 - useRef는 저장공간(변수 관리)이나 DOM 요소에 접근하기 위해 사용되는 훅이다. 
   - 저장공간(변수 관리) : 리렌더링 하지 않고, 컴포넌트의 속성만 조회 & 수정한다. 
@@ -452,7 +459,7 @@ dom에서 동기적으로 리렌더링이 일어나면 앞선 작업이 끝나�
   - 로그인 데이터, 웹 내 사용자가 쓰는 설정파일, 테마, 언어 등 다양하게 컴포넌트간 공유되어야할 데이터로 사용
 
     
- <br>
+<br>
 <br>
 	
 
@@ -527,8 +534,9 @@ null은 변수에 값이 없다는 것을 의도적으로 명시할 때 사용�
 
 
 
-![image-20221126002056894](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126002056894.png)
+![image](https://user-images.githubusercontent.com/72599761/204128739-402676c6-c324-40b2-b8ff-8bf9ce335853.png)
 
+<br>
 
 
 - var : 변수 재선언, 재할당 모두 가능하다, 함수레벨 스코프 
@@ -754,7 +762,8 @@ Promise를 활용할 시에는 .catch()문을 통해 에러 핸들링이 가능�
     - TSL은 데이터 무결성을 제공하기 때문에 데이터가 전송 중에 수정되거나 손상되는 것을 방지하고, 사용자가 자신이 의도하는 웹사이트와 통신하고 있음을 입증하는 인증 기능도 제공
 - 이 커넥션은 클라이언트가 민감한 정보를 서버와 안전하게 주고받도록 해준다. 
 
-![image-20221126020203734](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126020203734.png)
+![image](https://user-images.githubusercontent.com/72599761/204128764-81021f2c-3db3-422c-90e6-bebc8670dd5b.png)
+
 
 HTTPS(HyperText Transfer Protocol over TLS/SSL)는 **기존의 HTTP를 암호화한 프로토콜** 로 보안이 강화된 버전이다. 약어에서의 "S"가 원래 SSL(Secure Socket Layer)의 약자였지만 SSL 버전 3.1부터 TLS(Transport Layer Security)로 명칭이 바뀌고 TLS와 혼용하고 있다. TCP의 연결이 이루어진 후 TLS를 통해 암호화 설정이 되고 통신을 하는 방식이다.
 
@@ -775,7 +784,8 @@ HTTPS(HyperText Transfer Protocol over TLS/SSL)는 **기존의 HTTP를 암호화
 
 ### 🐬 URI vs URL 
 
-![image-20221127122112223](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127122112223.png)
+![image](https://user-images.githubusercontent.com/72599761/204128774-1ec65148-38fa-4adb-a809-de0072e90540.png)
+
 
 - URL : 서버에 있는 파일의 위치 
 - URI : 서버에 있는 자원의 위치 
@@ -867,7 +877,8 @@ UDP는 비연결형 프로토콜로, 손상된 데이터에 대해서 재전송�
 
 
 
-![image-20221126021307466](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126021307466.png)
+![image](https://user-images.githubusercontent.com/72599761/204128795-9dc4657f-576d-41aa-b6ec-2fd8bf2e187b.png)
+
 
 <br>
 <br>
@@ -887,7 +898,8 @@ OSI 7계층은 인터넷 환경에서 통신하기 위해 네트워킹에 대한
 
 ### 🐬 메모리 구조 
 
-![image-20221127170057508](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127170057508.png)
+![image](https://user-images.githubusercontent.com/72599761/204128815-90e34819-9fca-4a85-983d-2acbe0abe894.png)
+
 
 메모리 공간은 **코드, 데이터, 힙, 스택** 총 4종류가 있습니다. 
 
@@ -908,7 +920,8 @@ OSI 7계층은 인터넷 환경에서 통신하기 위해 네트워킹에 대한
 
 - 프로세스 
 
-  ![image-20221126013908858](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126013908858.png)
+![image](https://user-images.githubusercontent.com/72599761/204128832-935313c7-73d0-4669-809a-e411f78578be.png)
+
 
   - 컴퓨터에서 연속적으로 실행되고 있는 컴퓨터 프로그램 
   - 메모리에 올라와 실행되고 있는 프로그램의 인스턴스 (독립적인 개체)
@@ -918,7 +931,7 @@ OSI 7계층은 인터넷 환경에서 통신하기 위해 네트워킹에 대한
 
 - 스레드 
 
-  ![image-20221126014156976](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126014156976.png)
+  ![image](https://user-images.githubusercontent.com/72599761/204128857-fe739c11-6662-464c-be5f-9ad407a31a50.png)
 
   - 프로세스 내에서 실행되는 여러 흐름의 단위 
   - 프로세스의 특정한 수행경로 
@@ -943,9 +956,9 @@ OSI 7계층은 인터넷 환경에서 통신하기 위해 네트워킹에 대한
     1. 자원의 효율성 증대 -> 프로세스를 생성하여 자원을 할당하는 시스템 콜이 줄어든다. 
     2. 처리 비용 감소 및 응답시간 단축 -> 프로세스간의 통신보다 스레드 간의 통신 비용이 적고, 스레드간의 전환속도가 더 빠르다. 
 
-![image-20221126014728406](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221126014728406.png)
+![image](https://user-images.githubusercontent.com/72599761/204128882-475cccfe-06aa-4e00-984f-011001031ee9.png)
 
-
+<br>
 
 - 참고 
 
