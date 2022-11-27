@@ -531,7 +531,17 @@ dom에서 동기적으로 리렌더링이 일어나면 앞선 작업이 끝나�
 
 <br>
 <br>
-	
+
+## HTML
+
+### 🐬 로컬스토리지 vs 세션스토리지 vs 쿠키 
+
+모두 클라리언트 상에서 key/value 쌍을 저장할 수 있는 메커니즘으로 value는 반드시 문자열이어야 한다. 또한 모두 동일 출처 정책(SOP)을 따르기 때문에 다른 도메인에서 접근할 수 없다. 
+
+![image-20221127200537633](C:\Users\ggg71\AppData\Roaming\Typora\typora-user-images\image-20221127200537633.png)
+
+<br>
+<br>
 
 ## Javascript
 
