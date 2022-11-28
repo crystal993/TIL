@@ -1454,8 +1454,21 @@ HTTPS(HyperText Transfer Protocol over TLS/SSL)는 **기존의 HTTP를 암호화
 <br>
 <br>
 
-
 ### 🐬 RESTFul API란? 
+
+- 요약 
+
+  Rest API는 Rest를 기반으로 서비스 API를 구현한 것입니다. Rest라는 것은 자원의 표현, 즉 이름으로부터 자원의 정보를 주고받는 것을 의미합니다. 그래서 자원을 URI로 표현하고, 자원에 대한 행위는 HTTP Method로 표현합니다. 
+
+   <br>
+
+  Restful이라는 것은 Rest의 원리를 잘 따르는 시스템입니다. 
+  자원을 URI로, 행위에 맞는 적절한 HTTP method를 사용한 것입니다. 
+  Restful하지 않은 경우를 예로 들며 CRUD 기능을 모두 POST만으로 처리한것을 Restful 하지 않다고 할 수 있습니다. 
+
+  <br>
+
+  
 
 - RESTFul은 REST의 설계 규칙을 잘 지켜서 설계된 API를 RESTful한 API 
   - REST API : REST의 특징을 기반으로 서비스 API를 구현한 것 
